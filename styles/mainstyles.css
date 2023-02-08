@@ -6,7 +6,7 @@
 html{
     font-size: 62.5%;
 }
-main form{
+main section{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -16,8 +16,17 @@ main form{
     margin: 8% auto;
     padding-bottom: 1%;
     border-radius: 5%;
+    font-size: 1.3rem;
 }
-main form button{
+main section div{
     width: 150px;
     margin: 2% auto;
+    border: 1px black solid;
+    border-radius: 5%;
+    background-color: thistle;
+    height: 25px;
+}
+main section div:hover{
+    background-color: silver;
+    box-shadow: inset;
 }
