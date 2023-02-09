@@ -7,27 +7,44 @@ let carimanola={nombre:"Carimañola",valor:1000};
 let jugo={nombre:"Jugo",valor:1000};
 
 let ventas = document.querySelector('#Ventas');
-ventas.style.display ="none";
+let salidas = document.querySelector('#salida');
+ventas.style.display = "none";
+salidas.style.display = "none";
 
 
 
 function total(nombre){
-    let ventas = document.querySelector('#Ventas');
+    var ventas = document.querySelector('#Ventas');
     ventas.style.display ="block";
-    ventas.innerHTML='<h3>Ingrese la Cantidad</h3><br> <h4>'+nombre.nombre+'</h4><br><input type="number" id="cant"><br><button id="res">calcular</button><button id="close">cerrar</button><br><aside id="salida"></aside>';
-    let close = document.querySelector('#close');
-    let res = document.querySelector('#res');
+    ventas.innerHTML='<h3>Ingrese la Cantidad</h3><br> <h4>'+nombre.nombre+'</h4><br><input type="number" id="cant"><br><button id="res">agregar</button><button id="close">cerrar</button><br><aside id="salida"></aside>';
+    var close = document.querySelector('#close');
+    var res = document.querySelector('#res');
     close.addEventListener('click',()=>{
         ventas.style.display ="none";
     })
-    res.addEventListener('click',()=>{
-        let cant = document.querySelector('#cant');
-        let salida = document.querySelector('#salida');
+    res.addEventListener('click',function obtenerTotal(){
+        var cant = document.querySelector('#cant');
+        var salida = document.querySelector('#salida');
         if(cant.value==""){
             alert('No se ingreso la cantidad');
         }else{
-        let ventaUnit = nombre.valor * parseInt(cant.value);
-        salida.innerHTML = '<h2>Total a pagar: $'+ventaUnit+'</h2>';}
+        var ventaUnit = nombre.valor * parseInt(cant.value);
+        ventas.innerHTML += '<h2>Total a pagar: $'+ventaUnit+'</h2>';
+        };
+    });
+};
+let agregar = document.querySelector('#addItem');
+    agregar.addEventListener('click',()=>{
+        traerObjeto(total.nombre);
+    });
+
+function traerObjeto(nombre){
+    var tomarVenta ={
+        nombre:nombre.nombre,
+        cantidad:cant.value,
+        totalProducto:ventaUnit
+    }
+    console.log({
+        tomarVenta
     })
 }
-
