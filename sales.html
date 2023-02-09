@@ -11,15 +11,20 @@
     <main>
         <section>  
             <h1>Venta de fritos</h1>
-                <div>Arepa de Huevo</div>
-                <div>Empanada</div>
-                <div>Papa</div>
-                <div>Bofe</div>
-                <div>Carimañola</div>
-                <div>Jugo</div>
-                <a href="/index.html"><div>Volver</div></a>
+                <div onclick="total(arepa)">Arepa de Huevo</div>
+                <div  onclick="total(empanada)">Empanada</div>
+                <div onclick="total(papa)">Papa</div>
+                <div onclick="total(bofe)">Bofe</div>
+                <div onclick="total(carimanola)">Carimañola</div>
+                <div onclick="total(jugo)">Jugo</div>
+                <aside>
+                    <a href="/index.html"><div>Volver</div></a>
+                    <div>Subtotal</div>
+                </aside>
+        </section>
+        <section id="Ventas">
         </section>
     </main>
-    
+    <script src="/js/main.js" defer></script>
 </body>
 </html>

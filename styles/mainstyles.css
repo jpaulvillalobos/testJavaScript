@@ -10,23 +10,33 @@ main section{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top:8%;
     border: solid 2px blue;
     width: 210px;
-    margin: 8% auto;
+    margin: 2% auto;
     padding-bottom: 1%;
     border-radius: 5%;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 main section div{
-    width: 150px;
+    width: 80%;
     margin: 2% auto;
     border: 1px black solid;
     border-radius: 5%;
     background-color: thistle;
     height: 25px;
+    cursor: pointer;
 }
 main section div:hover{
     background-color: silver;
     box-shadow: inset;
+}
+main section  aside{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+main section  aside div{
+    width: 80px;
+    margin: 5% 10px;
 }
